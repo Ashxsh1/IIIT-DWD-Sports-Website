@@ -315,7 +315,7 @@ form {
 
 /* Style for the fixed footer section */
 footer {
-  height: 200px;
+  height: 160px;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -383,5 +383,5 @@ p {
 /* Style for the copyright notice */
 .copy-right {
   font-size: 0.9rem;
-  margin-top: auto;
+  margin-top: -30px;
 }

@@ -18,6 +18,7 @@ exports.getAddProduct = (req, res, next) => {
 };
 
 exports.postAddProduct = (req, res, next) => {
+  // console.log(hi);
   const title = req.body.title;
   const image = req.file;
   const price = req.body.price;
