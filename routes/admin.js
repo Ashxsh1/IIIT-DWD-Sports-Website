@@ -18,7 +18,7 @@ router.get('/products', isAdmin, adminController.getProducts);
 // /admin/add-product => POST
 router.post(
   '/add-product',
-  isAuth,
+  isAdmin,
   [
     body('title')
       .isString()
@@ -46,7 +46,7 @@ router.post(
       .isLength({ min: 5, max: 400 })
       .trim()
   ],
-  isAuth,
+  isAdmin,
   adminController.postEditProduct
 );
 
