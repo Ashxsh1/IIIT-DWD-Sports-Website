@@ -1,36 +1,54 @@
 <%- include('../includes/head.ejs') %>
-    <link rel="stylesheet" href="/css/product.css">
+<link rel="stylesheet" href="/css/product.css">
 </head>
 
 <body>
-    <%- include('../includes/navigation.ejs') %>
+<%- include('../includes/navigation.ejs') %>
 
-    <main>
-        <% if (prods.length > 0) { %>
-            <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; height: 65vh;">
-                <div style="flex: 0; padding: 16px;">
-                    <img src="images/_MG_0127.JPG" alt="Sports Updates" style="width: 300px; height: 400px;">
-                </div>
-                <div style="flex: 0; padding: 0px;">
-                    <img src="images/Inter IIIT.JPG" alt="Sports Updates" style="width: 650px; height: 450px;">
-                </div>
-                <div style="flex: 0; padding: 16px;">
-                    <img src="images\IMG_20230309_224603.jpg" alt="Sports Updates" style="width: 300px; height: 400px;">
-                </div>
-            </div>
-            <div style="display: flex; justify-content: center; align-items: center;">
-                <ul style="display: flex; justify-content: space-around; list-style-type: none; margin: 0; padding: 0;">
-                    <li style="padding: 0 16px;">2018</li>
-                    <li style="padding: 0 16px;">2019</li>
-                    <li style="padding: 0 16px;">2021</li>
-                    <li style="padding: 0 16px;">2022</li>
-                    <li style="padding: 0 16px;">2023</li>
-                </ul>
-            </div>
-        <% } else { %>
-            <h1 style="text-align: center;">No Sports Updates!</h1>
-        <% } %>
-    </main>
-
+<main>
+    <% if (prods.length > 0) { %>
+    <div
+        style="display: flex; flex-direction: row; justify-content: center; align-items: center; height: 65vh;">
+        <div style="flex: 0; padding: 16px;">
+            <img src="images/_MG_0127.JPG" alt="Sports Updates" style="width: 300px; height: 400px;">
+        </div>
+        <div style="flex: 0; padding: 0px; margin: 0 16px;"> <!-- Added margin here -->
+            <img src="images/Inter IIIT.JPG" alt="Sports Updates" style="width: 650px; height: 450px;">
+        </div>
+        <div style="flex: 0; padding: 16px;">
+            <img src="images\IMG_20230309_224603.jpg" alt="Sports Updates" style="width: 300px; height: 400px;">
+        </div>
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center;">
+        <div style="position: relative; width: 40%;">
+            <hr style="position: absolute; top: 50%; left: 0; right: 0; margin-top: -33px; border: 1px solid #02181e;">
+            <ul style="display: flex; justify-content: space-around; list-style-type: none; margin: 0; padding: 0;">
+                <li style="padding: 0 16px; position: relative;">
+                    <div style="width: 20px; height: 20px; border: 1px solid #02181e; border-radius: 50%;"></div>
+                    Intra - Branch Sports Day 2022
+                </li>
+                <li style="padding: 0 16px; position: relative;">
+                    <div style="width: 20px; height: 20px; border: 1px solid #02181e; border-radius: 50%;"></div>
+                    Professors Sports Day
+                </li>
+                <li style="padding: 0 16px; position: relative;">
+                    <div style="width: 20px; height: 20px; border: 1px solid #02181e; border-radius: 50%;"></div>
+                    Inter IIIT Sports Competition
+                </li>
+                <li style="padding: 0 16px; position: relative;">
+                    <div style="width: 20px; height: 20px; border: 2px solid #02181e; border-radius: 50%;"></div>
+                    ...
+                </li>
+                <li style="padding: 0 16px; position: relative;">
+                    <div style="width: 20px; height: 20px; border: 1px solid #02181e; border-radius: 50%;"></div>
+                    Intra - Branch Sports Day 2023
+                </li>
+            </ul>
+        </div>
+    </div>
+    <% } else { %>
+    <h1 style="text-align: center;">No Sports Updates!</h1>
+    <% } %>
+</main>
     <%- include('../includes/end.ejs') %>
 </body>
