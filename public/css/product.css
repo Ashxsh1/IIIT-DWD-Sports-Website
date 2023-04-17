@@ -3,25 +3,45 @@
     max-width: 90%;
     margin: auto;
     display: block;
+    background-color: #f8f8f8;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .product-item {
     width: 20rem;
     max-width: 95%;
     margin: 1rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-item:hover {
+    transform: scale(1.02);
 }
 
 .product__title {
     font-size: 1.2rem;
     text-align: center;
+    color: #333;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
 }
 
 .product__price {
     text-align: center;
     color: #4d4d4d;
     margin-bottom: 0.5rem;
+    font-size: 1rem;
 }
 
 .product__description {
     text-align: center;
+    color: #777;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
 }
