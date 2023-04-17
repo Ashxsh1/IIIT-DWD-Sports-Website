@@ -27,3 +27,25 @@
     border: 1px solid #00695c;
     color: #00695c;
 }
+
+@media (min-width: 768px) {
+  .orders__item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  .orders__item h1 {
+    flex-basis: 30%;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  .orders__products {
+    flex-basis: 70%;
+  }
+  
+  .orders__products-item {
+    margin: 0.5rem;
+  }
+}
