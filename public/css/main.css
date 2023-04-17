@@ -11,6 +11,8 @@ body {
   text-align: center;
   margin-top: 0;
   background-color: #ffffff;
+  height: 540px;
+  overflow: auto; 
 }
 
 header {
@@ -333,6 +335,7 @@ footer {
   flex-wrap: wrap;
   max-width: 1200px;
   margin: auto;
+  min-height: 10px;
 }
 
 /* Style for the address section */
