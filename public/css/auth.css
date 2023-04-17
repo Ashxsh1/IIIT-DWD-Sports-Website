@@ -1,6 +1,132 @@
+/* .login-form {
+  width: 20rem;
+  max-width: 90%;
+  margin: auto;
+  display: block;
+} */
+
+
 .login-form {
   width: 20rem;
   max-width: 90%;
   margin: auto;
   display: block;
-}
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  }
+  
+  .login-form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .login-form input[type="text"],
+  .login-form input[type="password"] {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #efefef;
+  color: #333;
+  }
+  
+  .login-form input[type="text"]:focus,
+  .login-form input[type="password"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+  }
+  
+  .login-form input[type="submit"] {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out;
+  }
+  
+  .login-form input[type="submit"]:hover {
+  background-color: #0056b3;
+  }
+  
+  .login-form .forgot-password {
+  text-align: right;
+  margin-top: 0.5rem;
+  color: #777;
+  }
+  
+  .login-form .forgot-password a {
+  color: #007bff;
+  text-decoration: none;
+  }
+  
+  .login-form .forgot-password a:hover {
+  text-decoration: underline;
+  color: #0056b3;
+  }
+  
+  .login-form .signup-link {
+  margin-top: 1rem;
+  text-align: center;
+  color: #777;
+  }
+  
+  .login-form .signup-link a {
+  color: #007bff;
+  text-decoration: none;
+  }
+  
+  .login-form .signup-link a:hover {
+  text-decoration: underline;
+  color: #0056b3;
+  }
+  
+  .login-form .social-media {
+  margin-top: 1.5rem;
+  }
+  
+  .login-form .social-media h3 {
+  text-align: center;
+  color: #777;
+  }
+  
+  .login-form .social-media ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  }
+  
+  .login-form .social-media ul li {
+  margin: 0 0.5rem;
+  }
+  
+  .login-form .social-media ul li a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: #efefef;
+  border-radius: 50%;
+  line-height: 40px;
+  text-align: center;
+  color: #333;
+  font-size: 18px;
+  transition: background-color 0.3s ease-in-out;
+  }
+  
+  .login-form .social-media ul li a:hover {
+  background-color: #007bff;
+  color: #fff;
+  }
+
+  
+  
