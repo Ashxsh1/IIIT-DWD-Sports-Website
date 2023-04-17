@@ -44,8 +44,9 @@ header {
 
 
 .logo {
-  height: 40px;
-  position: absolute;
+  height: 45px;
+  position: relative;
+  margin-top: 30px;
 }
 
 .logo-container {

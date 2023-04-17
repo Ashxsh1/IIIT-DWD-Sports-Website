@@ -3,13 +3,12 @@
   margin: 0;
   padding: 0;
   margin: auto;
-  width: 100%;
-  max-width: 40rem;
+  width: 40rem;
+  max-width: 90%;
 }
 
 .cart__item {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
@@ -24,14 +23,3 @@
   margin: 0;
 }
 
-@media (max-width: 768px) {
-  .cart__item {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .cart__item h1,
-  .cart__item h2 {
-    margin-bottom: 0.5rem;
-  }
-}
