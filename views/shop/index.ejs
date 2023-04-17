@@ -7,10 +7,25 @@
 
     <main>
         <% if (prods.length > 0) { %>
-            <div style="display: flex; flex-direction: column; justify-content: space-between; align-items: center; height: 65vh;">
-                <img src="images/Inter IIIT.JPG" alt="Sports Updates" style="width: 700px; height: 500px;">
-                <!-- <img src="images/_MG_0127.JPG" alt="Sports Updates" style="width: 500px; height: 700px;">
-                <img src="images/_MG_0211.JPG" alt="Sports Updates" style="width: 500px; height: 700px;"> -->
+            <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; height: 65vh;">
+                <div style="flex: 0; padding: 16px;">
+                    <img src="images/_MG_0127.JPG" alt="Sports Updates" style="width: 300px; height: 400px;">
+                </div>
+                <div style="flex: 0; padding: 0px;">
+                    <img src="images/Inter IIIT.JPG" alt="Sports Updates" style="width: 650px; height: 450px;">
+                </div>
+                <div style="flex: 0; padding: 16px;">
+                    <img src="images/_MG_0211.JPG" alt="Sports Updates" style="width: 300px; height: 400px;">
+                </div>
+            </div>
+            <div style="display: flex; justify-content: center; align-items: center;">
+                <ul style="display: flex; justify-content: space-around; list-style-type: none; margin: 0; padding: 0;">
+                    <li style="padding: 0 16px;">2000</li>
+                    <li style="padding: 0 16px;">2005</li>
+                    <li style="padding: 0 16px;">2010</li>
+                    <li style="padding: 0 16px;">2015</li>
+                    <li style="padding: 0 16px;">2020</li>
+                </ul>
             </div>
         <% } else { %>
             <h1 style="text-align: center;">No Sports Updates!</h1>

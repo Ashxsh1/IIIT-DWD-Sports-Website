@@ -315,7 +315,7 @@ form {
 
 /* Style for the fixed footer section */
 footer {
-  height: 140px;
+  height: 100px;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -339,7 +339,7 @@ footer {
 .address {
   flex-basis: 40%;
   margin-right: 800px;
-  margin-top: -85px;
+  margin-top: -80px;
 }
 
 /* Style for the contact section */
@@ -350,13 +350,13 @@ footer {
 
 /* Style for the heading */
 h3 {
-  font-size: 1.2rem;
-  margin-bottom: 5px;
+  font-size: 1rem;
+  margin-bottom: 4px;
 }
 
 /* Style for the paragraphs */
 p {
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 1.4;
   margin-bottom: -10px;
 }
@@ -383,5 +383,5 @@ p {
 /* Style for the copyright notice */
 .copy-right {
   font-size: 0.9rem;
-  margin-top: -10px;
+  margin-top: -14px;
 }
