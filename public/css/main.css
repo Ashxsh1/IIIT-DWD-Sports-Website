@@ -358,7 +358,7 @@ h3 {
 p {
   font-size: 0.9rem;
   line-height: 1.4;
-  margin-bottom: -10px;
+  margin-bottom: -11px;
 }
 
 /* Style for the footer links */
@@ -383,5 +383,5 @@ p {
 /* Style for the copyright notice */
 .copy-right {
   font-size: 0.9rem;
-  margin-top: -14px;
+  margin-top: -18px;
 }
