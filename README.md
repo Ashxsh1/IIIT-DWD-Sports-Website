@@ -2,7 +2,7 @@
  IIIT Dharwad Sports Website
 
                                                               HOME PAGE
-![Screenshot (56)](https://user-images.githubusercontent.com/97025079/231405957-4fd99f95-b91e-45a2-9cc5-2a9e5b29e569.png)
+![Screenshot (62)](https://user-images.githubusercontent.com/97025079/232504941-b28884da-f384-47b2-8c8f-c4b10f03c643.png)
 
                                                           PROCUREMENT PAGE
 ![Screenshot (57)](https://user-images.githubusercontent.com/97025079/231406058-0ea6e619-2a6f-49e9-b3d5-0d329fe97b81.png)
