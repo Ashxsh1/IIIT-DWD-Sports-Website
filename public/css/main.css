@@ -12,12 +12,12 @@ body {
   margin-top: 0;
   background-color: #ffffff;
   height: 540px;
-  overflow: auto; 
+  overflow: auto;
 }
 
 .card {
   /* Add shadows to create the "card" effect */
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   width: 30%;
   height: 110%;
@@ -25,7 +25,7 @@ body {
 
 /* On mouse-over, add a deeper shadow */
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 /* Add some padding inside the card container */
@@ -33,20 +33,17 @@ body {
   padding: 2px 16px;
 }
 
-
-
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  margin: 0;  
+  margin: 0;
 }
 
 .logo {
   height: 40px;
-  position:absolute;
-
+  position: absolute;
 }
 
 .logo-container {
@@ -54,7 +51,6 @@ header {
   align-items: center;
   justify-content: flex-start;
 }
-
 
 main {
   padding: 1rem;
@@ -89,8 +85,8 @@ form {
 .main-header__nav {
   height: 100%;
   width: 100%;
-  display:flex;
-  align-items:normal;
+  display: flex;
+  align-items: normal;
   justify-content: center;
 }
 
@@ -101,7 +97,6 @@ form {
   display: flex;
   justify-content: center;
 }
-
 
 .main-header__item {
   margin: 0 1rem;
@@ -126,7 +121,6 @@ form {
 .main-header__item button:active {
   color: #01132f;
 }
-
 
 .mobile-nav {
   width: 30rem;
@@ -443,6 +437,7 @@ body {
   left: 50%;
   margin-left: -3px;
   margin-top: 30px;
+  margin-bottom: 110px;
 }
 
 /* Container around content */
@@ -502,7 +497,7 @@ body {
   left: 30px;
   border: medium solid #456bc0;
   border-width: 10px 10px 10px 0;
-  border-color: transparent white transparent transparent;
+  border-color: transparent transparent transparent #474e5d;
 }
 
 /* Fix the circle for containers on the right side */
@@ -526,14 +521,14 @@ body {
   }
 
 /* Full-width containers */
-  .container {
+  .card {
     width: 100%;
     padding-left: 70px;
     padding-right: 25px;
   }
 
 /* Make sure that all arrows are pointing leftwards */
-  .container::before {
+  .card::before {
     left: 60px;
     border: medium solid white;
     border-width: 10px 10px 10px 0;
