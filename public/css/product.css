@@ -58,3 +58,51 @@
         margin: 1rem 0;
     }
 }
+
+.complaint-box {
+    background-color: #cedaddf8;
+    padding: 16px;
+    margin-top: 16px;
+    border: 2px solid #4369e8;
+    border-radius: 8px;
+    }
+    
+    .complaint-box h2 {
+    margin-bottom: 8px;
+    color: #04285e;
+    font-size: 24px;
+    }
+    
+    .complaint-box textarea {
+    width: 100%;
+    height: 150px;
+    resize: none;
+    border: 1px solid #a8bfe8;
+    border-radius: 4px;
+    background-color: #fafafa;
+    padding: 16px;
+    font-family: 'Roboto', sans-serif;
+    transition: border-color 0.3s ease;
+    }
+    
+    .complaint-box textarea:focus {
+    outline-color: #29b6f6;
+    border: 1px solid #29b6f6;
+    }
+    
+    .complaint-box button {
+    background-color: #3e6da7;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    margin-top: 16px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+    }
+    
+    .complaint-box button:hover {
+    background-color: #25618f;
+    }

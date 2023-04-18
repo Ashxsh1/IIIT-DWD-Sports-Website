@@ -8,21 +8,32 @@
   display: block;
   width: 100%;
   margin-bottom: 0.25rem;
+  color: #2e5794; /* Set label and input/textarea color */
+  /* font-family: 'Comic Sans MS', cursive; Set custom font */
 }
 
 .form-control input,
 .form-control textarea {
-  border: 1px solid #a1a1a1;
+  border: 2px solid #512da8; /* Set border color */
   font: inherit;
-  border-radius: 2px;
+  border-radius: 10px; /* Increase border radius for a more rounded look */
+  background-color: #ffffff; /* Set background color */
+  padding: 0.75rem; /* Add some padding */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
+  transition: border-color 0.3s ease; /* Add transition effect for border color */
 }
 
 .form-control input:focus,
 .form-control textarea:focus {
-  outline-color: #00695c;
+  outline-color: #5c7ad6; /* Set focus outline color */
 }
 
 .form-control input.invalid,
 .form-control textarea.invalid {
-  border-color: red;
+  border-color: #f44336; /* Set border color for invalid inputs */
+}
+
+/* Add hover effect */
+.form-control:hover {
+  border-color: #5c7ad6; /* Set border color on hover */
 }

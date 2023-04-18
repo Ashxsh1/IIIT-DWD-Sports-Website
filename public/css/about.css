@@ -24,3 +24,8 @@
     color: #666;
     margin-bottom: 5px;
   }
+  
+ .empty-container {
+  width: full;
+  height: 150px;
+ }

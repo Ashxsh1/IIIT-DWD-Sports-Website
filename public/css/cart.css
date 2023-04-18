@@ -23,3 +23,7 @@
   margin: 0;
 }
 
+.empty-container {
+ width: full;
+ height: 150px;
+}

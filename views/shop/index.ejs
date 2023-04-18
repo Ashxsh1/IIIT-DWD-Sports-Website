@@ -12,46 +12,56 @@
         <div style="flex: 0; padding: 16px;">
             <img src="images/_MG_0127.JPG" alt="Sports Updates" style="width: 300px; height: 400px;">
         </div>
-        <div style="flex: 0; padding: 0px; margin: 0 16px;"> <!-- Added margin here -->
+        <div style="flex: 0; padding: 0px; margin: 0 16px;">
             <img src="images/Inter IIIT.JPG" alt="Sports Updates" style="width: 650px; height: 450px;">
         </div>
         <div style="flex: 0; padding: 16px;">
             <img src="images\IMG_20230309_224603.jpg" alt="Sports Updates" style="width: 300px; height: 400px;">
         </div>
     </div>
-    
-      <div class="timeline">
-        <div class="container left">
-          <div class="content">
-            <a href="https://drive.google.com/drive/folders/1RapqAE0hIZ9sGROAgcqVcDR_E3iNWD_x?usp=share_link">
-                <h2>Annual Sports Meet 2022</h2>
-              </a>
-                
-        </div>
-        </div>
-        <div class="container right">
-          <div class="content">
-            <a href="https://drive.google.com/drive/folders/1-c8Bf8-s6tcDRKRgH6d_A_rvsy7MdrGY?usp=share_link">
-                <h2>Faculty Sports Day 2022</h2>  
-        </div>
-        </div>
+
+    <div class="timeline">
         <div class="container left">
             <div class="content">
-              <a href="https://drive.google.com/drive/folders/1CqQdCtPzytWVwy9bpASCszKKstsYfZu1?usp=share_link">
-                <h2>Inter IIIT Sports Meet 2023</h2>  
-        </div>
-        </div>
-        <div class="container right">
-            <div class="content">
-              <h2>Annual Sports Meet 2023</h2>
+                <a href="https://drive.google.com/drive/folders/1RapqAE0hIZ9sGROAgcqVcDR_E3iNWD_x?usp=share_link">
+                    <h2>Annual Sports Meet 2022</h2>
+                </a>
+
             </div>
-          </div>
-      </div>
-      
-      
+        </div>
+        <div class="container right">
+            <div class="content">
+                <a href="https://drive.google.com/drive/folders/1-c8Bf8-s6tcDRKRgH6d_A_rvsy7MdrGY?usp=share_link">
+                    <h2>Faculty Sports Day 2022</h2>
+                </a>
+            </div>
+        </div>
+        <div class="container left">
+            <div class="content">
+                <a href="https://drive.google.com/drive/folders/1CqQdCtPzytWVwy9bpASCszKKstsYfZu1?usp=share_link">
+                    <h2>Inter IIIT Sports Meet 2023</h2>
+                </a>
+            </div>
+        </div>
+        <div class="container right">
+            <div class="content">
+                <h2>Annual Sports Meet 2023</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="complaint-box">
+        <h2>Complaint Box</h2>
+        <form action="/complaint" method="post">
+            <label for="complaint">Write your complaint:</label><br>
+            <textarea id="complaint" name="complaint" rows="4" cols="50"></textarea><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
     <% } else { %>
     <h1 style="text-align: center;">No Sports Updates!</h1>
     <% } %>
 </main>
-    <%- include('../includes/end.ejs') %>
+<%- include('../includes/end.ejs') %>
 </body>
