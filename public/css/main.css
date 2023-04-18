@@ -368,7 +368,11 @@ footer {
   padding: 5px;
   text-align: center;
   color: white;
-  
+  /* Add creative styling */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
 }
 
 /* Style for the footer container */
@@ -398,6 +402,9 @@ footer {
 h3 {
   font-size: 1rem;
   margin-bottom: 4px;
+  /* Add creative styling */
+  color: white;
+  text-transform: uppercase;
 }
 
 /* Style for the paragraphs */
@@ -405,6 +412,8 @@ p {
   font-size: 0.9rem;
   line-height: 1.4;
   margin-bottom: -11px;
+  /* Add creative styling */
+  color: black;
 }
 
 /* Style for the footer links */
@@ -419,18 +428,33 @@ p {
   color: #074b5e;
   text-decoration: none;
   margin: 0 10px;
+  /* Add creative styling */
+  transition: color 0.3s ease-in-out;
+  color: white;
 }
 
 /* Style for the footer links on hover */
 .footer-links a:hover {
   text-decoration: underline;
+  /* Add creative styling */
+  color: #FF9F55;
 }
 
 /* Style for the copyright notice */
 .copy-right {
   font-size: 0.9rem;
-  margin-top: -18px;
+  margin-top: -18px; /* Updated margin-top to -22px */
+  /* Add creative styling */
+  color: white;
+  /* Center the copyright notice */
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
 }
+
+
+
 
 /*timeline*/
 * {
@@ -454,6 +478,7 @@ body {
   padding-top: 104px;
 }
 
+
 /* The actual timeline (the vertical ruler) */
 .timeline::after {
   content: '';
@@ -466,6 +491,7 @@ body {
   margin-left: -3px;
   margin-top: 30px;
   margin-bottom: 110px;
+  z-index: 1; /* Increase z-index to place it above other elements */
 }
 
 /* Container around content */
@@ -487,7 +513,8 @@ body {
   border: 4px solid #FF9F55;
   top: 15px;
   border-radius: 50%;
-  z-index: 1;
+  z-index: 2; /* Increase z-index to place it above timeline */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Add box shadow for a 3D effect */
 }
 
 /* Place the container to the left */
@@ -507,7 +534,7 @@ body {
   position: absolute;
   top: 22px;
   width: 0;
-  z-index: 1;
+  z-index: 3; /* Increase z-index to place it above timeline and circle */
   right: 30px;
   border: medium solid #456bc0;
   border-width: 10px 0 10px 10px;
@@ -521,7 +548,7 @@ body {
   position: absolute;
   top: 22px;
   width: 0;
-  z-index: 1;
+  z-index: 3; /* Increase z-index to place it above timeline and circle */
   left: 30px;
   border: medium solid #456bc0;
   border-width: 10px 10px 10px 0;
@@ -572,4 +599,20 @@ body {
   .right {
     left: 0%;
   }
+}
+
+.hero-img {
+  transition: transform 0.2s ease-in-out;
+}
+
+.hero-img:hover {
+  transform: scale(1.02);
+}
+
+.content {
+  transition: transform 0.2s ease-in-out;
+}
+
+.content:hover {
+  transform: scale(1.02);
 }
