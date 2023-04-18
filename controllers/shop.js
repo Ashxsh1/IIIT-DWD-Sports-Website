@@ -215,3 +215,10 @@ exports.getInvoice = (req, res, next) => {
     })
     .catch(err => next(err));
 };
+
+exports.getAbout = (req, res, next) => {
+  res.render('shop/about-us', {
+    pageTitle: 'About Us',
+    path: '/about-us'
+  });
+};
