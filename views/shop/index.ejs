@@ -50,14 +50,13 @@
         </div>
     </div>
 
-    <div class="complaint-box">
-        <h2>Complaint Box</h2>
-        <form action="/complaint" method="post">
-            <label for="complaint">Write your complaint:</label><br>
-            <textarea id="complaint" name="complaint" rows="4" cols="50"></textarea><br>
-            <input type="submit" value="Submit">
-        </form>
-    </div>
+     <form>   
+    <h1>Complaint Box</h1>   
+  <input name="name" type="text" class="feedback-input" placeholder="Name" />   
+  <input name="email" type="text" class="feedback-input" placeholder="Email" />
+  <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
+  <input type="submit" value="SUBMIT"/>
+</form>
 
     <% } else { %>
     <h1 style="text-align: center;">No Sports Updates!</h1>

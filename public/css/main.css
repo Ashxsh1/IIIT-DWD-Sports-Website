@@ -403,7 +403,7 @@ h3 {
   font-size: 1rem;
   margin-bottom: 4px;
   /* Add creative styling */
-  color: white;
+  color: black;
   text-transform: uppercase;
 }
 
@@ -413,7 +413,7 @@ p {
   line-height: 1.4;
   margin-bottom: -11px;
   /* Add creative styling */
-  color: black;
+  color: white;
 }
 
 /* Style for the footer links */
