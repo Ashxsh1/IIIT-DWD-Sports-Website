@@ -368,6 +368,7 @@ footer {
   padding: 5px;
   text-align: center;
   color: white;
+  z-index: 1000;
   /* Add creative styling */
   display: flex;
   justify-content: center;
