@@ -604,6 +604,7 @@ body {
 
 .hero-img {
   transition: transform 0.2s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow */
 }
 
 .hero-img:hover {
@@ -612,6 +613,7 @@ body {
 
 .content {
   transition: transform 0.2s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow */
 }
 
 .content:hover {
