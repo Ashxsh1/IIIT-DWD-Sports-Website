@@ -18,7 +18,9 @@
                     type="email" 
                     name="email" 
                     id="email" 
-                    value="<%= oldInput.email %>">
+                    value="<%= oldInput.email %>"
+                    pattern="^[a-zA-Z0-9_.+-]+@iiitdwd\.ac\.in$"
+                    title="Please enter a valid @iiitdwd.ac.in email address">
             </div>
             <div class="form-control">
                 <label for="password">Password</label>
