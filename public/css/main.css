@@ -143,6 +143,18 @@ form {
   font-weight: bold;
 }
 
+/* Add media query for smaller screens */
+@media (max-width: 768px) {
+  .main-header__item {
+    margin: 0 0.5rem; /* Reduce margin for smaller screens */
+  }
+
+  .main-header__item a,
+  .main-header__item button {
+    font-size: 14px; /* Reduce font size for smaller screens */
+  }
+}
+
 .main-header__item a:hover,
 .main-header__item a:active,
 .main-header__item a.active,
@@ -454,7 +466,34 @@ p {
   transform: translateX(-50%);
 }
 
+/* Media queries for responsiveness */
 
+/* Small screens */
+@media (max-width: 767px) {
+  .footer-container {
+    justify-content: center;
+  }
+  .address,
+  .contact {
+    flex-basis: 100%;
+    margin: 0;
+  }
+}
+
+/* Medium screens */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .address,
+  .contact {
+    margin: 0;
+  }
+}
+
+/* Large screens */
+@media (min-width: 1024px) {
+  .footer-container {
+    justify-content: space-between;
+  }
+}
 
 
 /*timeline*/

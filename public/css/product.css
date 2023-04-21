@@ -59,12 +59,17 @@
     }
 }
 
+/* Complaint box styles */
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
-/* complaint box*/
+body { 
+  background:rgb(255, 255, 255); 
+}
 
-body { background:rgb(255, 255, 255); }
-form { max-width:420px; margin:50px auto; }
+form { 
+  max-width:420px; 
+  margin:50px auto; 
+}
 
 .feedback-input {
   color:white;
@@ -78,12 +83,14 @@ form { max-width:420px; margin:50px auto; }
   transition: all 0.3s;
   padding: 13px;
   margin-bottom: 15px;
-  width:50%;
+  width:100%; /* Changed width to 100% for responsive design */
   box-sizing: border-box;
   outline:0;
 }
 
-.feedback-input:focus { border:2px solid #3a6396; }
+.feedback-input:focus { 
+  border:2px solid #3a6396; 
+}
 
 textarea {
   height: 100px;
@@ -93,7 +100,7 @@ textarea {
 
 [type="submit"] {
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-  width: 50%;
+  width: 100%; /* Changed width to 100% for responsive design */
   background:#3a6396;
   border-radius:5px;
   border:0;

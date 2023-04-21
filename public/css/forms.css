@@ -37,3 +37,12 @@
 .form-control:hover {
   border-color: #5c7ad6; /* Set border color on hover */
 }
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .form-control label,
+  .form-control input,
+  .form-control textarea {
+    margin-bottom: 0.5rem; /* Increase margin bottom for more spacing on smaller screens */
+  }
+}
