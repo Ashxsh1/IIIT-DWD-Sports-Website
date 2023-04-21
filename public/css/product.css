@@ -113,3 +113,75 @@ textarea {
   margin-top:-4px;
   font-weight:700;
 }
+
+.hero-img {
+  transition: transform 0.2s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.hero-img:hover {
+  transform: scale(1.02);
+}
+
+.content {
+  transition: transform 0.2s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.content:hover {
+  transform: scale(1.02);
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+
+.hero-container > div {
+  flex: 0;
+  padding: 16px;
+}
+
+.hero-img {
+  width: 18.75rem;
+  height: 25rem;
+  transition: transform 0.2s ease-in-out; /* Add transition for transform property */
+}
+
+.hero-img-large {
+  width: 40.625rem;
+  height: 28.125rem;
+  cursor: pointer; /* Add cursor pointer for hover effect */
+}
+
+.hero-img-large:hover {
+  transform: scale(1.02); /* Apply scale transform on hover */
+}
+
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .hero-container > div {
+    padding: 8px;
+  }
+
+  .hero-img,
+  .hero-img-large {
+    width: 100%;
+    height: auto;
+  }
+
+  .content {
+    width: 100%;
+    height: auto;
+  }
+}

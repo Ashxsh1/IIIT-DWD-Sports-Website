@@ -30,7 +30,8 @@ body {
 
 /* Add some padding inside the card container */
 .container {
-  padding: 2px 16px;
+  padding: 0.125rem 1rem;
+
 }
 
 header {
@@ -96,6 +97,7 @@ form {
 
 .image {
   height: 20rem;
+  width: 10rem;
 }
 
 .image img {
@@ -155,10 +157,7 @@ form {
   .mobile-nav__item-list li {
     display: block;
   }
-  .hero-img {
-    max-width: auto; /* Set max-width to 100% for mobile devices */
-    height: auto; /* Set height to auto for responsive scaling */
-  }
+  
 
   /* Add the following styles to center the side menu toggle in the header */
   .menu-toggle {
@@ -385,7 +384,7 @@ form {
 
 /* Style for the fixed footer section */
 footer {
-  height: 100px;
+  height: 6.25rem;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -394,7 +393,6 @@ footer {
   text-align: center;
   color: white;
   z-index: 1000;
-  /* Add creative styling */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -504,7 +502,8 @@ body {
   /* justify-content: center; */
   position: relative;
   height:100vh;
-  padding-top: 104px;
+  width: 90vh;
+  padding-top: 8px;
 }
 
 
@@ -637,23 +636,7 @@ body {
   }
 }
 
-.hero-img {
-  transition: transform 0.2s ease-in-out;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow */
-}
 
-.hero-img:hover {
-  transform: scale(1.02);
-}
-
-.content {
-  transition: transform 0.2s ease-in-out;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow */
-}
-
-.content:hover {
-  transform: scale(1.02);
-}
 
 
 .hamburger-button {
