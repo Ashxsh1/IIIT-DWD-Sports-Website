@@ -489,7 +489,7 @@ p {
 }
 
 /* Set a background color */
-body {
+timeline-body {
   background-color: #ffffff; /*change it later to #474e5d*/
   font-family: Helvetica, sans-serif;
 }
@@ -503,7 +503,7 @@ body {
   position: relative;
   height:100vh;
   width: 90vh;
-  padding-top: 8px;
+  padding-top: 10px;
 }
 
 
@@ -566,7 +566,7 @@ body {
   right: 30px;
   border: medium solid #456bc0;
   border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent #474e5d;
+  border-color: transparent;
 }
 
 /* Add arrows to the right container (pointing left) */
