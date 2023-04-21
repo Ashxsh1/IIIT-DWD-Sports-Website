@@ -230,13 +230,13 @@ form {
 }
 
 #side-menu-toggle {
-  border: 1px solid white;
   font: inherit;
-  padding: 0.5rem;
-  display: block;
+  padding: -1.5rem;
   background: transparent;
-  color: white;
+  color: black;
   cursor: pointer;
+  margin-bottom: -16px;
+  margin-left: 6px;
 }
 
 #side-menu-toggle:focus {
@@ -653,4 +653,24 @@ body {
 
 .content:hover {
   transform: scale(1.02);
+}
+
+
+.hamburger-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger-line {
+    width: 100%;
+    height: 2px;
+    background-color: #0a1d36; 
+    margin-bottom: 4px; 
 }
