@@ -143,15 +143,28 @@ form {
   font-weight: bold;
 }
 
-/* Add media query for smaller screens */
-@media (max-width: 768px) {
-  .main-header__item {
-    margin: 0 0.5rem; /* Reduce margin for smaller screens */
+/* Hide header text in mobile mode */
+@media screen and (max-width: 768px) {
+  .main-header {
+    height: calc(2.3rem + 10px); /* Increase header height by 10px */
+    padding: 0 1.5rem;
+  }
+  .main-header__item-list li {
+    display: none;
+  }
+  .mobile-nav__item-list li {
+    display: block;
+  }
+  .hero-img {
+    max-width: auto; /* Set max-width to 100% for mobile devices */
+    height: auto; /* Set height to auto for responsive scaling */
   }
 
-  .main-header__item a,
-  .main-header__item button {
-    font-size: 14px; /* Reduce font size for smaller screens */
+  /* Add the following styles to center the side menu toggle in the header */
+  .menu-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -166,11 +179,11 @@ form {
 .mobile-nav {
   width: 30rem;
   height: 100vh;
-  max-width: 90%;
+  max-width: 80%;
   position: fixed;
   left: 0;
   top: 0;
-  background: rgb(88, 138, 196);
+  background: white;
   z-index: 10;
   padding: 2rem 1rem 1rem 2rem;
   transform: translateX(-100%);
@@ -190,7 +203,7 @@ form {
 }
 
 .mobile-nav__item {
-  margin: 1rem;
+  margin: 1.5rem;
   padding: 0;
 }
 
@@ -429,30 +442,6 @@ p {
   color: white;
 }
 
-/* Style for the footer links */
-.footer-links {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Style for the footer links */
-.footer-links a {
-  color: #074b5e;
-  text-decoration: none;
-  margin: 0 10px;
-  /* Add creative styling */
-  transition: color 0.3s ease-in-out;
-  color: white;
-}
-
-/* Style for the footer links on hover */
-.footer-links a:hover {
-  text-decoration: underline;
-  /* Add creative styling */
-  color: #FF9F55;
-}
-
 /* Style for the copyright notice */
 .copy-right {
   font-size: 0.9rem;
@@ -638,6 +627,13 @@ body {
 /* Make all right containers behave like the left ones */
   .right {
     left: 0%;
+  }
+}
+@media (max-width: 767px) {
+  .timeline {
+    max-height: none;
+    height: auto;
+    overflow-y: visible;
   }
 }
 
