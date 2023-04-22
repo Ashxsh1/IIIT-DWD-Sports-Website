@@ -164,6 +164,12 @@ form {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
+    width: 2.3rem;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    
   }
 }
 
@@ -232,7 +238,7 @@ form {
   font: inherit;
   padding: -1.5rem;
   background: transparent;
-  color: black;
+  color: rgb(33, 56, 102);
   cursor: pointer;
   margin-bottom: -16px;
   margin-left: 6px;
@@ -434,7 +440,7 @@ h3 {
 /* Style for the paragraphs */
 p {
   font-size: 0.9rem;
-  line-height: 1.4;
+  line-height: 1;
   margin-bottom: -11px;
   /* Add creative styling */
   color: white;
@@ -453,9 +459,7 @@ p {
   transform: translateX(-50%);
 }
 
-/* Media queries for responsiveness */
 
-/* Small screens */
 @media (max-width: 767px) {
   .footer-container {
     justify-content: center;
@@ -464,10 +468,10 @@ p {
   .contact {
     flex-basis: 100%;
     margin: 0;
+    margin-bottom: -12px;
   }
 }
 
-/* Medium screens */
 @media (min-width: 768px) and (max-width: 1023px) {
   .address,
   .contact {
@@ -501,9 +505,11 @@ timeline-body {
   /* align-items: center; */
   /* justify-content: center; */
   position: relative;
-  height:100vh;
-  width: 90vh;
+  height:97vh;
+  width: 100vh;
   padding-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
@@ -636,7 +642,18 @@ timeline-body {
   }
 }
 
+ /* Add CSS rules for responsiveness here */
+ @media screen and (max-width: 768px) {
+            
+  .footer-section {
+      text-align: center;
+      margin-bottom: 1rem;
+  }
 
+  .footer-section h3 {
+      margin-top: 0;
+  }
+}
 
 
 .hamburger-button {
