@@ -9,6 +9,7 @@ const csrf = require('csurf');
 const flash = require('connect-flash');
 const multer = require('multer');
 
+mongoose.set('strictQuery', false);
 
 const errorController = require('./controllers/error');
 const User = require('./models/user');
