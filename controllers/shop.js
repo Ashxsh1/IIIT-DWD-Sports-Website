@@ -176,45 +176,40 @@ exports.getInvoice = (req, res, next) => {
       pdfDoc.pipe(fs.createWriteStream(invoicePath));
       pdfDoc.pipe(res);
 
-      pdfDoc.fontSize(26).text('Invoice', {
-        underline: true
+      // Add date, time, and user email id to the invoice
+      const date = new Date();
+      const dateString = date.toLocaleDateString();
+      const timeString = date.toLocaleTimeString();
+      const userEmail = req.user.email;
+      
+
+      pdfDoc.fontSize(23).text('IIIT Dharwad Sports Equipment Invoice\n\n', {
+        underline: true,
+        align: 'center'
       });
-      pdfDoc.text('-----------------------');
-      let totalPrice = 0;
+      pdfDoc.fontSize(14).text('Items Procured:\n\n');
       order.products.forEach(prod => {
-        totalPrice += prod.quantity * prod.product.price;
         pdfDoc
-          .fontSize(14)
+          .fontSize(12)
           .text(
             prod.product.title +
               ' - ' +
-              prod.quantity +
-              ' x ' +
-              '$' +
-              prod.product.price
+              prod.quantity
           );
       });
-      pdfDoc.text('---');
-      pdfDoc.fontSize(20).text('Total Price: $' + totalPrice);
+      
+      pdfDoc.text('---\n\n');
+      pdfDoc.text('The items procured have to be returned back to the institute within 15 days!\n\n');
+
+      pdfDoc.fontSize(12).text(`Date: ${dateString}`, { align: 'left' });
+      pdfDoc.fontSize(12).text(`Time: ${timeString}`, { align: 'left' });
+      pdfDoc.fontSize(12).text(`Mail ID: ${userEmail}\n\n`, { align: 'left' });
 
       pdfDoc.end();
-      // fs.readFile(invoicePath, (err, data) => {
-      //   if (err) {
-      //     return next(err);
-      //   }
-      //   res.setHeader('Content-Type', 'application/pdf');
-      //   res.setHeader(
-      //     'Content-Disposition',
-      //     'inline; filename="' + invoiceName + '"'
-      //   );
-      //   res.send(data);
-      // });
-      // const file = fs.createReadStream(invoicePath);
-
-      // file.pipe(res);
     })
     .catch(err => next(err));
 };
+
 
 exports.getAbout = (req, res, next) => {
   res.render('shop/about-us', {

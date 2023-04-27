@@ -11,7 +11,7 @@ const transporter = nodemailer.createTransport(
   sendgridTransport({
     auth: {
       api_key:
-        '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'
+        ''
     }
   })
 );
@@ -216,8 +216,8 @@ exports.postReset = (req, res, next) => {
           from: 'ashishgidijala@gmail.com',
           subject: 'Password reset',
           html: `
-            <p>You requested a password reset</p>
-            <p>Click this <a href="http://localhost:3000/reset/${token}">link</a> to set a new password.</p>
+            <p>You have requested for a password reset of your IIIT Dharwad Sports Website.</p>
+            <p>Click this <a href="http://localhost:3000/reset/${token}">link</a> to set a new password for your account!</p>
           `
         });
       })
@@ -279,6 +279,56 @@ exports.postNewPassword = (req, res, next) => {
       res.redirect('/login');
     })
     .catch(err => {
+      const error = new Error(err);
+      error.httpStatusCode = 500;
+      return next(error);
+    });
+};
+
+exports.postOrder = (req, res, next) => {
+  const productId = req.body.productId;
+  const productQuantity = req.body.quantity;
+  let fetchedProduct;
+  productId.findById(productId)
+    .then(product => {
+      fetchedProduct = product;
+      const order = new order({
+        user: req.session.user._id,
+        product: product._id,
+        quantity: productQuantity,
+        date: new Date()
+      });
+      return order.save();
+    })
+    .then(result => {
+      // send email to user
+      transporter.sendMail({
+        to: '21bds007@iiitdwd.ac.in',
+        from: 'ashishgidijala@gmail.com',
+        subject: 'Procurement Request',
+        html: `<p>New Procurement Request!</p>
+               <p>This is the content of the email.</p>
+               <p>Procurement Details:</p>
+               <ul>
+                 <li>Product Name: ${fetchedProduct.title}</li>
+                 <li>Quantity: ${productQuantity}</li>
+                 <li>Date: ${result.date.toLocaleString()}</li>
+               </ul>
+               <img src="images\\logo.png" alt="Footer"> <!-- Footer image -->`
+      })
+      .then(result => {
+        console.log('Order confirmation email sent!');
+        res.redirect('/orders');
+      })
+      .catch(err => {
+        console.log(err);
+        const error = new Error(err);
+        error.httpStatusCode = 500;
+        return next(error);
+      });
+    })
+    .catch(err => {
+      console.log(err);
       const error = new Error(err);
       error.httpStatusCode = 500;
       return next(error);
