@@ -155,10 +155,18 @@ exports.postSignup = (req, res, next) => {
       return transporter.sendMail({
         to: email,
         from: "ashishgidijala@gmail.com",
-        subject: "Signup Successful!",
-        html: `<p>You successfully signed up!</p>
-               <p>This is the content of the email.</p>
-               <p>Thank you for signing up!</p>
+        subject: " Successful Sign Up into IIIT Dharwad Sports Website",
+        html: `
+               <p>Dear Student,</p>
+
+               <p>I am pleased to inform you that your sign up process into the IIIT Dharwad Sports website has been successfully completed. You are now a registered member of our sports website, and you can access all the features and benefits available to our users.
+               <p>With your account, you can view the latest sports news, updates, and schedules of various sports events happening at IIIT Dharwad. You can also book sports facilities, participate in tournaments and events, and connect with other sports enthusiasts in our community.
+               We are committed to providing you with the best sports experience possible, and we hope that you will take full advantage of the resources available on our website.</p>
+               <p>If you have any questions or concerns, please do not hesitate to contact us. We are here to help you in any way we can.</p>
+               
+               <p>Best Regards,</p>
+               <p>IIIT Dharwad Sports Committee</p>
+               
                <img src="images\logo.png" alt="Footer"> <!-- Footer image -->`,
       });
     })
@@ -215,10 +223,23 @@ exports.postReset = (req, res, next) => {
           from: "ashishgidijala@gmail.com",
           subject: "Password reset",
           html: `
-            <p>You have requested for a password reset of your IIIT Dharwad Sports Website.</p>
-            <p>Click this <a href="http://localhost:3000/reset/${token}">link</a> to set a new password for your account!</p>
-          `,
+            <p>Dear Student,</p>
+
+            <p>We have received your request to reset your password for the IIIT Dharwad Sports website. We understand how important it is for you to access the site and enjoy its features, and we are happy to assist you in resetting your password.
+            
+            <p>Please click on the following link to reset your password: <a href="http://localhost:3000/reset/${token}">PASSWORD RESET LINK</a>. This link will direct you to the password reset page on our website, where you can enter your new password and confirm the changes.</p>
+            
+            <p>Please note that the password reset link will only be valid for a limited time, so we encourage you to reset your password as soon as possible. Also, for security reasons, we recommend that you choose a strong and unique password that is not easily guessed.</p>
+            
+            <p>If you did not initiate this password reset request or have any concerns, please contact us immediately so that we can investigate the matter and ensure that your account is secure.</p>
+            
+            <p>Thank you for your cooperation, and we hope that you continue to enjoy using the IIIT Dharwad Sports website.</p>
+            
+            <p>Best Regards,</p>
+            <p>IIIT Dharwad Sports Committee</p>`,
         });
+      }).then(() => {
+        console.log("Mail Sent for Password Reset!")
       })
       .catch((err) => {
         const error = new Error(err);

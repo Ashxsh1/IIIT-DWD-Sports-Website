@@ -31,10 +31,6 @@ const userSchema = new Schema({
       }
     ]
   },
-  // isAdmin: {
-  //   type: Boolean,
-  //   default: false
-  // }
 });
 
 userSchema.methods.addToCart = function(product) {
