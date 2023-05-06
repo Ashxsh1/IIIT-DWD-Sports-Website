@@ -47,7 +47,7 @@
 
 /* Empty container text */
 .empty-container p {
-  margin: 0;
+  margin: 1rem;
 }
 
 /* Media query for smaller screens */

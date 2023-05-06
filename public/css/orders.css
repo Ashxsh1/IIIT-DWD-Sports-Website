@@ -29,6 +29,10 @@
   overflow: 500px;
 }
 
+.empty-container p {
+  margin: 1rem;
+}
+
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
   .orders__item h1 {
@@ -43,5 +47,9 @@
   .orders__products-item {
     margin: 0.25rem 0; /* Decrease margin for smaller screens */
     padding: 0.25rem; /* Decrease padding for smaller screens */
+  }
+
+  .empty-container {
+    height: 100px;
   }
 }

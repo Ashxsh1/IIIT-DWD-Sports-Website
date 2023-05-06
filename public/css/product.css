@@ -100,14 +100,14 @@ textarea {
 
 [type="submit"] {
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-  width: 100%; /* Changed width to 100% for responsive design */
+  width: fit-content;
   background:#3a6396;
   border-radius:5px;
   border:0;
   cursor:pointer;
   color:white;
-  font-size:24px;
-  padding-top:10px;
+  font-size:19px;
+  padding-top: -3px;
   padding-bottom:10px;
   transition: all 0.3s;
   margin-top:-4px;
