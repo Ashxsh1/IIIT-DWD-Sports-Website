@@ -10,7 +10,8 @@ const User = require("../models/user");
 const transporter = nodemailer.createTransport(
   sendgridTransport({
     auth: {
-      api_key: '',
+      api_key:
+        "",
     },
   })
 );
@@ -238,8 +239,9 @@ exports.postReset = (req, res, next) => {
             <p>Best Regards,</p>
             <p>IIIT Dharwad Sports Committee</p>`,
         });
-      }).then(() => {
-        console.log("Mail Sent for Password Reset!")
+      })
+      .then(() => {
+        console.log("Mail Sent for Password Reset!");
       })
       .catch((err) => {
         const error = new Error(err);
@@ -307,6 +309,7 @@ exports.postNewPassword = (req, res, next) => {
 
 exports.postOrder = (req, res, next) => {
   const orderId = req.orderId.toString();
+  const userEmail = req.user.email;
   order.findById(orderId).then((order) => {
     let productsHtml = "";
     for (let i = 0; i < order.products.length; i++) {
@@ -314,21 +317,26 @@ exports.postOrder = (req, res, next) => {
       const quantity = order.products[i].quantity;
       productsHtml += `<li>Product Name: ${product.title}, Quantity: ${quantity}</li>`;
     }
-    transporter.sendMail({
-      to: "21bds007@iiitdwd.ac.in",
-      from: "ashishgidijala@gmail.com",
-      subject: "Procurement Request",
-      html: `<p>New Procurement Request!</p>
-             <p>This is the content of the email.</p>
+    transporter
+      .sendMail({
+        to: "21bds007@iiitdwd.ac.in",
+        userEmail,
+        from: "ashishgidijala@gmail.com",
+        subject: "Procurement Request from IIIT Dwd Sports Website",
+        html: `<p>New Sports Item Procurement Request!</p>
+             <p>Student Details</p>
+             <p>Student Mail ID: ${userEmail}</p>
+             <p>Order ID: ${orderId}</p>
              <p>Procurement Details:</p>
              <ul>
                ${productsHtml}
              </ul>
              <p>Date: ${new Date().toLocaleString()}</p>
-             <img src="images\\logo.png" alt="Footer">`,
-    }).then(() => {
-      console.log("Mail Sent for Order ID: ", orderId);
+             <img src="images\logo.png" alt="Footer">`,
+      })
+      .then(() => {
+        console.log("Mail Sent for Order ID: ", orderId);
       });
-    })
-    };
+  });
+};
 
