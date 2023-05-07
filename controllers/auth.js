@@ -319,15 +319,15 @@ exports.postOrder = (req, res, next) => {
     }
     transporter
       .sendMail({
-        to: "21bds007@iiitdwd.ac.in",
-        userEmail,
+        to: ["21bds007@iiitdwd.ac.in", userEmail],
         from: "ashishgidijala@gmail.com",
         subject: "Procurement Request from IIIT Dwd Sports Website",
         html: `<p>New Sports Item Procurement Request!</p>
              <p>Student Details</p>
              <p>Student Mail ID: ${userEmail}</p>
-             <p>Order ID: ${orderId}</p>
+             
              <p>Procurement Details:</p>
+             <p>Order ID: ${orderId}</p>
              <ul>
                ${productsHtml}
              </ul>
@@ -339,4 +339,3 @@ exports.postOrder = (req, res, next) => {
       });
   });
 };
-
